@@ -39,12 +39,12 @@ $error |= empty($config['ip']);
 // Deprecated for my needs: 5/31/2013
 	// TTL is no longer needed since it's hard coded in $nsupdateCommands
 		//$error |= empty($config['ttl']);
-	// Key is currently not required. 
+	// Key is currently not required.
 		//$error |= empty($config['key']);
 
-// Define a debug mode callable from the URL, if needed. 
+// Define a debug mode callable from the URL, if needed.
 if ($_REQUEST['debug'] == 'true' || $error) {
-    echo "nsupdate web-interface\n";
+    echo "nsupdate web interface\n";
     echo "----------------------\n\n";
     echo "Error: Missing parameters\n\n";
     print_r($config);
@@ -60,7 +60,7 @@ if (is_readable($cacheFile)) {
 
 // Exit now unless IP address is new.
 if ($config['old_ip'] == $config['ip']) {
-	echo "nsupdate web-interface\n";
+	echo "nsupdate web interface\n";
 	echo "----------------------\n\n";
 	echo date("D M j G:i:s T Y") . "\n\n";
 	echo "Previous IP: " . $config['old_ip'] . "\n";
@@ -102,7 +102,7 @@ $errors = '';
 // Execute nsupdate and print status info.
 $process = proc_open($nsupdate, $descriptors, $pipes);
 
-echo "nsupdate web-interface\n";
+echo "nsupdate web interface\n";
 echo "----------------------\n\n";
 echo date("D M j G:i:s T Y") . "\n\n";
 echo "Previous IP: " . $config['old_ip'] . "\n";
