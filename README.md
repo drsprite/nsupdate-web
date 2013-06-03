@@ -2,7 +2,6 @@ nsupdate-web
 =============
 
 (c) Pat O'Brien <drsprite@github.com> - http://github.com/drsprite
-https://github.com/drsprite/nsupdate-web
 Licensed under the GNU GPL 2.0 or later.
 
 This PHP script will allow you to update your dynamic BIND zones directly 
