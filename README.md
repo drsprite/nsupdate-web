@@ -25,17 +25,19 @@ There are two types of ways to install this script.
 2. Using MySQL to keep track of IP history, as well as a way to get domain status.
 
 Option 1:
-1. Copy index_flatfile.php to the web accessible directory of your choosing that is on 
-   the same server that your dynamic DNS zones are on.
+
+1. Copy <b>index_flatfile.php</b> to the web accessible directory of your choosing that is on 
+   the same server that your dynamic DNS zones are on. Rename it to whatever you want.
 2. Create a subdirectory called <b>cache</b>, and give the directory write permissions.
 
 
 Option 2:
-1. Copy index_mysql.php to the web accessible directory of your choosing that is on the
-same server that your dynamic DNS zones are on.
-2. Copy config.php, styles.css to the same directory.
-3. Edit the values within config.php to match your MySQL server, username, password and database.
-4. Run the dyndns.sql script to create the table that will be used.
+
+1. Copy <b>index_mysql.php</b> to the web accessible directory of your choosing that is on the
+same server that your dynamic DNS zones are on. Rename it to whatever you want. 
+2. Copy <b>config.php and styles.css</b> to the same directory.
+3. Edit the values within <b>config.php</b> to match your MySQL server, username, password and database.
+4. Run the <b>dyndns.sql</b> script to create the table that will be used.
 
 Once you have either option installed, simply point your browser to the directory you dropped 
 it into with a few extra parameters. 
