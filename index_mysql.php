@@ -17,8 +17,6 @@ if (!mysql_select_db(MYSQL_DB)) {
 	die("Unable to select database.");
 }
 
-
-//header("Content-Type: text/plain");
 header("Content-Type: text/html");
 
 // Setup global HTML & CSS
