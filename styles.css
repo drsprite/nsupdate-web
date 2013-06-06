@@ -1,0 +1,17 @@
+table {
+	padding: 5px;
+	border:1px black solid;
+	border-collapse: collapse
+}
+th {
+	font-size:14px;
+	/* border-bottom:1px black solid; */
+	border:1px black solid;
+	padding:10px 8px;
+	text-align:center;
+}
+td {
+	padding: 5px 5px;
+	font-size:14px;
+	border:1px black solid;
+}
