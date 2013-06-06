@@ -11,7 +11,7 @@
 // Setup MySQL.
 require("config.php");
 if (!mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS)) {
-	die("Unable to connect to database.");
+	die("Unable to connect to MySQL.");
 }
 if (!mysql_select_db(MYSQL_DB)) {
 	die("Unable to select database.");
