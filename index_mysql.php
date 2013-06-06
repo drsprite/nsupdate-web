@@ -31,14 +31,13 @@ echo "<pre>";
 
 // Config
 $nsupdate = '/usr/bin/nsupdate -v -k /path/to/your/top/secret/nsupdate/key';
-$cacheDir = 'cache';
 
-// Show all items in the database if &status is in the URL.
+// First and foremost, if status is called, show it.
 if (isset($_GET['status'])) {
     echo "nsupdate web interface\n";
     echo "----------------------\n\n";
 	echo date("D M j G:i:s T Y") . "\n\n";
-    echo "Current defined dynamic zones:\n\n";
+    echo "Current dynamic zones defined in MySQL:\n\n";
 	
 	// Retrieve all items from the database.
 	$sql=mysql_query("SELECT * FROM domains");
@@ -110,7 +109,7 @@ $hostname = $config['hostname'] . ".yourdomain.com";
 $sql = mysql_query("SELECT * FROM domains WHERE hostname='$hostname'");
 $result = mysql_fetch_object($sql);
 
-// Needed for later MySQL updates
+// Setup variables needed for later MySQL updates
 $updateID = $result->id;
 $updateIP = $config['ip'];
 $ip = $result->ip;
@@ -118,10 +117,10 @@ $updateSource = $_SERVER['REMOTE_ADDR'];
 $updateTime = date('Y-m-d H:i:s');
 
 // Handle cache of old/current IP address.
-$config['old_ip'] = $result->ip;
+$config['old_ip'] = $ip;
 
 // Exit now unless IP address is new.
-if ($config['ip'] == $result->ip) {
+if ($config['ip'] == $ip) {
 	echo "nsupdate web interface\n";
 	echo "----------------------\n\n";
 	echo date("D M j G:i:s T Y") . "\n\n";
@@ -179,7 +178,7 @@ if (is_resource($process)) {
     $errors .= 'RETURN: ' . $returnValue . "\n";
 }
 
-// Output errors if unsuccessfull, else update cache.
+// Output errors if unsuccessful, else update cache.
 if ($returnValue != 0) {
     echo "\nError: DNS not updated!\n\n";
     echo $errors;
