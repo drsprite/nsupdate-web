@@ -24,6 +24,11 @@ There are two types of ways to install this script.
 1. Using a flatfile to keep track of IP history
 2. Using MySQL to keep track of IP history, as well as a way to get domain status.
 
+To be clear, in either scenario (flatfile or MySQL), the data stored is <b>informational</b>
+only and is only used to help reduce the load on BIND by doing IP checks to prevent unnecessary 
+nsupdate calls. By using MySQL, it allows you to get a quick status on your domain to see what 
+is currently defined. 
+
 Option 1:
 
 1. Copy <b>index_flatfile.php</b> to the web accessible directory of your choosing that is on 
