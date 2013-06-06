@@ -2,12 +2,9 @@
 # nsupdate-web
 # Updates BIND records via web URL for uses such as DIY dynamic DNS
 #
-# Original by (c) Karl-Martin Skontorp <kms@skontorp.net> ~ http://22pf.org/
-# https://github.com/kms/nsupdate-web
-# Licensed under the GNU GPL 2.0 or later.
-#
-# Forked and modified by Pat O'Brien
+# (c) 2013 Pat O'Brien - drsprite@github.com
 # https://github.com/drsprite/nsupdate-web
+# Licensed under the GNU GPL 2.0 or later.
 #
 ######################################################################
 
