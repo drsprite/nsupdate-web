@@ -119,8 +119,8 @@ $updateTime = date('Y-m-d H:i:s');
 // Handle cache of old/current IP address.
 $config['old_ip'] = $ip;
 
-// Exit now unless IP address is new.
-if ($config['ip'] == $ip) {
+// If IP is the same, and we're not forcing an update, then exit
+if ( ( $config['ip'] == $ip) && ( !isset($_GET['force']) ) ) {
 	echo "nsupdate web interface\n";
 	echo "----------------------\n\n";
 	echo date("D M j G:i:s T Y") . "\n\n";
